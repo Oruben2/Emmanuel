@@ -1,0 +1,28 @@
+package com.mycompany.calculadoranotas;
+
+import java.util.Scanner;
+
+public class CalculadoraNotas {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("NOTA: Tus calificaciones son en un rango de 0 a 100");
+        
+        System.out.print("Ingresa la calificación de parcialen: ");
+        double parciales = sc.nextDouble();
+
+        System.out.print("Ingresa la calificación del proyecto: ");
+        double proyecto = sc.nextDouble();
+
+        System.out.print("Ingresa la calificación del examen final: ");
+        double examenFinal = sc.nextDouble();
+
+
+        double notaFinal = (parciales * 0.40) + (proyecto * 0.30) + (examenFinal * 0.30);
+
+        
+        System.out.println("La calificación final del estudiante es: " + notaFinal);
+
+        sc.close();
+    }
+}
