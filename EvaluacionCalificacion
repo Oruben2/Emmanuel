@@ -1,0 +1,29 @@
+package com.mycompany.evaluacioncalificacion;
+
+import java.util.Scanner;
+
+public class EvaluacionCalificacion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingresa la calificación numérica: ");
+        int calificacion = sc.nextInt();
+        String letra = " ";
+
+        if (calificacion >= 90) {
+            letra = "A";
+        } else if (calificacion >= 80) {
+            letra = "B";
+        } else if (calificacion >= 70) {
+            letra = "C";
+        } else if (calificacion >= 60) {
+            letra = "D";
+        } else {
+            letra = "F";
+        }
+
+        System.out.println("La calificación en letra es: " + letra);
+
+        sc.close();
+    }
+}
