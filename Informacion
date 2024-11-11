@@ -1,0 +1,44 @@
+package com.mycompany.informacion;
+
+import java.util.Scanner;
+
+public class Informacion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String eleccion;
+
+        while (true) {  
+            System.out.println("Ingresa el nombre de un artista, película o serie de tu preferencia:");
+            System.out.println("(Opciones: 'Taylor Swift', 'Inception', 'Breaking Bad', 'Stranger Things', 'Vincent van Gogh' o 'Salir' para terminar)");
+            eleccion = sc.nextLine();
+            
+            if (eleccion.equalsIgnoreCase("Salir")) {
+                break;  
+            }
+            
+            switch (eleccion) {
+                case "Taylor Swift":
+                    System.out.println("Taylor Swift es una cantautora estadounidense famosa por sus álbumes como '1989', 'Reputation' y 'Lover'.");
+                    break;
+                case "Inception":
+                    System.out.println("Inception es una película de ciencia ficción dirigida por Christopher Nolan, protagonizada por Leonardo DiCaprio.");
+                    break;
+                case "Breaking Bad":
+                    System.out.println("Breaking Bad es una serie de televisión sobre un profesor de química que se convierte en fabricante de metanfetamina.");
+                    break;
+                case "Stranger Things":
+                    System.out.println("Stranger Things es una serie de ciencia ficción de Netflix sobre eventos sobrenaturales en la ciudad ficticia de Hawkins.");
+                    break;
+                case "Vincent van Gogh":
+                    System.out.println("Vincent van Gogh fue un pintor neerlandés, famoso por obras como 'La noche estrellada' y 'Los girasoles'.");
+                    break;
+                default:
+                    System.out.println("Lo siento, no tengo información sobre eso.");
+                    break;
+            }
+
+            System.out.println();          }
+
+        sc.close();  
+    }
+}
