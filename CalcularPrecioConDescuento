@@ -1,0 +1,28 @@
+package com.mycompany.calcularpreciocondescuento;
+
+import java.util.Scanner;
+
+public class CalcularPrecioConDescuento {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingresa el precio del producto: ");
+        double precio = sc.nextDouble();
+        double descuento = 0.0;
+
+        if (precio > 500) {
+            descuento = 0.25;
+        } else if (precio > 200) {
+            descuento = 0.20;
+        } else if (precio > 100) {
+            descuento = 0.10;
+        } else {
+            descuento = 0.0;
+        }
+
+        double precioFinal = precio - (precio * descuento);
+        System.out.println("El precio con descuento es: " + precioFinal);
+
+        sc.close();
+    }
+}
