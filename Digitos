@@ -1,0 +1,20 @@
+
+package com.mycompany.digitos;
+
+import java.util.Scanner;
+
+public class Digitos {
+
+   public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingresa un número entero: ");
+        int numero = sc.nextInt();
+
+        int contadorDigitos = String.valueOf((numero)).length();
+
+        System.out.println("El número tiene " + contadorDigitos + " dígitos.");
+
+        sc.close();
+    }
+}

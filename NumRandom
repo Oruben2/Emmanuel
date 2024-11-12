@@ -1,0 +1,39 @@
+
+package com.mycompany.numrandom;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class NumRandom {
+
+ public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random random = new Random();
+
+        int numeroAleatorio = random.nextInt(100) + 1;  
+        int intento;
+        
+        System.out.println("Adivina el número entre 1 y 100");
+
+        while (true) {
+            System.out.print("Ingresa tu suposición: ");
+            try {
+                intento = sc.nextInt();
+
+                if (intento > numeroAleatorio) {
+                    System.out.println("Demasiado alto. Intenta de nuevo.");
+                } else if (intento < numeroAleatorio) {
+                    System.out.println("Demasiado bajo. Intenta de nuevo.");
+                } else {
+                    System.out.println("¡Felicidades! Has adivinado el número.");
+                    break;
+                }
+            } catch (Exception e) {
+                System.out.println("Por favor, ingresa un número válido.");
+                sc.next();  // Limpiar la entrada no válida
+            }
+        }
+
+        sc.close();
+    }
+}

@@ -1,0 +1,31 @@
+
+package com.mycompany.secuencia;
+
+import java.util.Scanner;
+
+
+public class Secuencia {
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingresa el primer número de la secuencia: ");
+        int primerNumero = sc.nextInt();
+
+        System.out.print("Ingresa la diferencia entre los números: ");
+        int diferencia = sc.nextInt();
+
+        System.out.print("Ingresa el número máximo hasta el cual debe continuar la secuencia: ");
+        int maximo = sc.nextInt();
+
+        int numeroActual = primerNumero;
+
+        System.out.println("Secuencia aritmética:");
+        do {
+            System.out.print(numeroActual + " ");
+            numeroActual += diferencia;
+        } while (numeroActual <= maximo);
+
+        sc.close();
+    }
+}
