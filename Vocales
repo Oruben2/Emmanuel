@@ -1,0 +1,39 @@
+
+
+package com.mycompany.vocales;
+
+import java.util.Scanner;
+
+
+public class Vocales {
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char letra;
+
+        System.out.println("Ingresa letras para verificar si son vocales o consonantes. Ingresa un espacio para terminar.");
+
+        while (true) {
+            System.out.print("Ingresa una letra: ");
+            letra = sc.next().charAt(0);
+
+            if (letra == ' ') {
+                System.out.println("Programa terminado.");
+                break;
+            }
+
+            if (Character.isLetter(letra)) {
+                letra = Character.toLowerCase(letra);
+                if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+                    System.out.println("Es una vocal.");
+                } else {
+                    System.out.println("Es una consonante.");
+                }
+            } else {
+                System.out.println("Por favor, ingresa solo letras.");
+            }
+        }
+
+        sc.close();
+    }
+}
