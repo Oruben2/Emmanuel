@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.numeros;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Ruben Ortiz
+ */
+public class Numeros {
+
+ public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero;
+        int suma = 0;
+        int contador = 0;
+
+        System.out.println("Ingresa números positivos para calcular la media. Ingresa un número negativo para terminar.");
+
+        while (true) {
+            System.out.print("Ingresa un número: ");
+            numero = sc.nextInt();
+
+            if (numero < 0) {
+                break;  
+            }
+
+            suma += numero;
+            contador++;
+        }
+
+        if (contador > 0) {
+            double media = (double) suma / contador;
+            System.out.println("La media de los números positivos ingresados es: " + media);
+        } else {
+            System.out.println("No se ingresaron números positivos.");
+        }
+
+        sc.close();
+    }
+}
